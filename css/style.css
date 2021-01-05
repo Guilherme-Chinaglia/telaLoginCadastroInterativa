@@ -355,9 +355,164 @@ input:-webkit-autofill
     }
 }
 
+/*VERSÃO MOBILE*/
+@media screen and (max-width: 1040px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
 
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .first-content, .second-content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
 
+    .first-column, .second-column {
+        width: 100%;
+    }
+    
+    .sign-in-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
 
+    }
+
+    .form {
+        width: 90%;
+    }
+    
+    /* ANIMAÇÃO MOBILE CSS*/
+
+    @keyframes deslocamentoEsq {
+
+        from {
+            top: 0;
+            opacity: 1;
+            z-index: 12;
+        }
+    
+        25% {
+            top: -80px;
+            opacity: .5;
+            /* z-index: 12; NÃO HÁ NECESSIDADE */
+        }
+    
+        50% {
+            top: -100px;
+            opacity: .2;
+            /* z-index: 12; NÃO HÁ NECESSIDADE */
+        }
+    
+        to {
+            top: -110px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+    
+    @keyframes deslocamentoDir {
+    
+        from {
+            top: 0;
+            z-index: 12;
+        }
+    
+        25% {
+            top: 80px;
+            /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+        }
+    
+        50% {
+            top: 100px;
+            /* z-index: 12; NÃO HÁ NECESSIDADE*/
+            /* background-color: yellow;  Exemplo que dei no vídeo*/
+        }
+    
+        to {
+            top: 110px;
+            z-index: -1;
+        }
+    }
+    
+    
+    
+    @keyframes slidein {
+    
+        from {
+            top: 0;
+            height: 40%;
+        }
+    
+        25% {
+            top: 5%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        to {
+            top: 60%;
+            height: 40%;
+        }
+    }
+    
+    @keyframes slideout {
+    
+        from {
+            top: 60%;
+            height: 40%;
+        }
+    
+        25% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 5%;
+            height: 50%;
+        }
+    
+        to {
+            top: 0;
+            height: 40%;
+        }
+    }
+   
+}
+
+@media screen and (max-width: 740px) {
+    .form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .form {
+        width: 100%;
+    }
+}
 
 
 
