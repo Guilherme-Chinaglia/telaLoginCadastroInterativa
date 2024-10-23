@@ -39,25 +39,26 @@
                         </a>
                     </ul>
                 </div><!-- social media -->
+
                 <p class="description description-second">or use your email for registration:</p>
-                <form class="form">
+
+                <form class="form" action="php/register.php" method="post">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
+                        <input type="text" name="nome" placeholder="Name">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
-                    </label>
+                        <input type="password" name="senha" placeholder="Password">
+                    </label>                    
                     
-                    
-                    <button class="btn btn-second">sign up</button>        
+                    <button type="submit" class="btn btn-second">sign up</button>        
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
@@ -90,20 +91,20 @@
                     </ul>
                 </div><!-- social media -->
                 <p class="description description-second">or use your email account:</p>
-                <form class="form">
+                <form class="form" action="php/login.php" method="post">
                 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email">
                     </label>
                 
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" name="senha" placeholder="Password">
                     </label>
                 
                     <a class="password" href="#">forgot your password?</a>
-                    <button class="btn btn-second">sign in</button>
+                    <button type="submit" class="btn btn-second">sign in</button> 
                 </form>
             </div><!-- second column -->
         </div><!-- second-content -->
