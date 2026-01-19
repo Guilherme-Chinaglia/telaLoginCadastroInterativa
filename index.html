@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="container">
         <div class="content first-content">
@@ -17,14 +19,14 @@
                 <p class="description description-primary">To keep connected with us</p>
                 <p class="description description-primary">please login with your personal info</p>
                 <button id="signin" class="btn btn-primary">sign in</button>
-            </div>    
+            </div>
             <div class="second-column">
                 <h2 class="title title-second">create account</h2>
                 <div class="social-media">
                     <ul class="list-social-media">
                         <a class="link-social-media" href="#">
                             <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>        
+                                <i class="fab fa-facebook-f"></i>
                             </li>
                         </a>
                         <a class="link-social-media" href="#">
@@ -40,24 +42,24 @@
                     </ul>
                 </div><!-- social media -->
                 <p class="description description-second">or use your email for registration:</p>
-                <form class="form">
+                <form class="form" id="signupForm">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
+                        <input type="text" id="signupName" placeholder="Name" required>
                     </label>
-                    
+
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="signupEmail" placeholder="Email" required>
                     </label>
-                    
+
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" id="signupPassword" placeholder="Password" required>
                     </label>
-                    
-                    
-                    <button class="btn btn-second">sign up</button>        
+
+
+                    <button type="submit" class="btn btn-second">sign up</button>
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
@@ -90,24 +92,26 @@
                     </ul>
                 </div><!-- social media -->
                 <p class="description description-second">or use your email account:</p>
-                <form class="form">
-                
+                <form class="form" id="loginForm">
+
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
                     </label>
-                
+
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" id="loginPassword" placeholder="Password" required>
                     </label>
-                
+
                     <a class="password" href="#">forgot your password?</a>
-                    <button class="btn btn-second">sign in</button>
+                    <button type="submit" class="btn btn-second">sign in</button>
                 </form>
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
-    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
+
 </html>
